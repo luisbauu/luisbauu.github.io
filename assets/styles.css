@@ -1,18 +1,35 @@
 :root
 {
-    font-size: 16px;
-    font-family: 'Open Sans';
-    --text-primary: #b6b6b6;
+    font-size: 1.4375rem;
+    font-family: "Consolas", "Courier New", monospace;
+    --text-primary: #d6d6d6;
     --text-secondary: #ececec;
-    --bg-primary: #23232e;
+    --bg-primary: #2e2e2e;
     --bg-secondary: #141418;
-    --transition-speed: 600ms
+    --transition-speed: 300ms
+
+    /* Background: #2e2e2e;
+    Comments:#797979;*/
 }
 
+.location
+{
+  margin:0;
+  padding:0;
+  margin-bottom:0;
+  margin-left: 5.2rem;
+}
+
+.location-text
+{
+  padding:0;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
 body
 {
-    color:white;
-    background-color:black;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
     margin: 0;
     padding: 0;
 }
@@ -29,7 +46,7 @@ body::-webkit-scrollbar-track
 
 body::-webkit-scrollbar-thumb
 {
-    background: crimson;
+    background: #b05279;
 }
 
 main
@@ -40,6 +57,7 @@ main
 
 .navbar
 {
+    z-index: 1;
     width: 5rem;
     height: 100vh;
     position: fixed; 
@@ -129,10 +147,95 @@ main
   .navbar:hover .logo svg {
     transform: rotate(-180deg);
   }
+
+  .profile-text
+  {
+    position:relative;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 2rem;
+  }
+  
+  .profile-div
+  {
+    margin-top: 0;
+    margin-bottom: 3.5rem;
+  }
+
+  .profile-img
+  {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 50%;
+    border: 6px solid var(--bg-secondary);
+  }
+
+  .icons
+  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .icons-a
+  {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    height: 3.5rem;
+    fill: var(--text-primary);
+    margin-bottom:-3rem;
+  }
+  
+  .line-numbers
+  {
+    color: grey;
+    font-size: 1.4375rem;
+    position: absolute;
+    top: -0.25rem;
+    left: 3.4rem;
+  }
+  .line-numbers li { 
+     counter-increment: item;
+  }
+  
+  .line-numbers li:before { 
+    content: counter(item) ' ';
+  }
+
+  ol { 
+      counter-reset: item;
+      list-style-type: none;
+  }
+
+
+
+ 
+
+	
+
+  
   
   /* Small screens */
   @media only screen and (max-width: 600px) 
   {
+    body 
+    {
+      overflow: visible;
+    } 
+
+    .location
+    {
+      margin-left: 0.35rem;
+    }
+
     .navbar 
     {
       bottom: 0;
@@ -164,15 +267,33 @@ main
     {
         display:none;
     }
+
     main 
     {
-         margin: 0;
+       margin: 0;
+    }
+    .line-numbers
+    {
+      left: -1.4rem;
+    }
+    .profile-img
+    {
+      width: 45%; 
+    }
+
+    .icons-a
+    {
+      margin-bottom:-5rem;
     }
   }
   
   /* Large screens */
   @media only screen and (min-width: 600px) 
   {
+    body 
+    {
+      overflow: hidden;
+    }
     .navbar 
     {
       top: 0;
