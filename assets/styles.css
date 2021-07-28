@@ -46,7 +46,7 @@ body::-webkit-scrollbar-track
 
 body::-webkit-scrollbar-thumb
 {
-    background: #b05279;
+    background: #F92472;
 }
 
 main
@@ -238,7 +238,7 @@ main
 
     .navbar 
     {
-      bottom: 0;
+      bottom: -0.9rem;
       width: 100vw;
       height: 5rem;
     }
