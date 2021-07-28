@@ -226,11 +226,6 @@ main
   /* Small screens */
   @media only screen and (max-width: 600px) 
   {
-    *{
-      margin:0;
-      padding:0;
-    }
-    
     body 
     {
       overflow: visible;
@@ -326,4 +321,68 @@ main
     {
       left: 0.5rem;
     }
-}
+  }
+
+  /* Safari */
+  @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+  { 
+    body 
+    {
+      overflow: visible;
+    } 
+
+    .location
+    {
+      margin-left: 0.35rem;
+    }
+
+    .navbar 
+    {
+      bottom: -0.9rem;
+      width: 80vw;
+      height: 5rem;
+    }
+  
+    .logo 
+    {
+      display: none;
+    }
+  
+    .navbar-nav 
+    {
+      flex-direction: row;
+    }
+  
+    .nav-link 
+    {
+      justify-content: center;
+    }
+
+    .navbar:hover
+    {
+        width: 80vw;
+    }
+
+    .navbar:hover .link-text
+    {
+        display:none;
+    }
+
+    main 
+    {
+       margin: 0;
+    }
+    .line-numbers
+    {
+      left: -1.4rem;
+    }
+    .profile-img
+    {
+      width: 45%; 
+    }
+
+    .icons-a
+    {
+      margin-bottom:-5rem;
+    }
+  }
