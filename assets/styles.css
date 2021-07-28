@@ -226,6 +226,11 @@ main
   /* Small screens */
   @media only screen and (max-width: 600px) 
   {
+    *{
+      margin:0;
+      padding:0;
+    }
+    
     body 
     {
       overflow: visible;
