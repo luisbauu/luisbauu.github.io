@@ -224,7 +224,7 @@ main
   
   
   /* Small screens */
-  /* @media only screen and (max-width: 600px) 
+  /* @media only screen and (max-width: 600px)
   {
     body 
     {
@@ -285,8 +285,8 @@ main
     {
       margin-bottom:-5rem;
     }
-  }
-   */
+  } */
+
   /* Large screens */
   @media only screen and (min-width: 600px) 
   {
@@ -350,7 +350,7 @@ main
 
     .navbar 
     {
-      bottom: -1.25rem;
+      bottom: -1rem;
       width: 100vw;
       height: 5rem;
     }
