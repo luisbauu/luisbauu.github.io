@@ -81,11 +81,6 @@ main
 {
     width: 100%;
 }
-  
-.nav-item:last-child 
-{
-    margin-top: auto;
-}
 
 .nav-link
 {
@@ -216,7 +211,46 @@ main
   }
 
 
+  .projects-flex
+  {
+    justify-content: center;
+    display: flex;
+    margin-left: 1.5rem;
+  }
 
+  .projects-title
+  {
+    text-align: center;
+  }
+
+  .projects-section
+  {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  .projects-img
+  {
+    max-height: 200px;
+    display: block; 
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-form
+  {
+    display: block; 
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgrey;
+    width: 640px;
+    height: 800px;
+    overflow:hidden;
+  }
  
 
 	
@@ -321,8 +355,22 @@ main
       left: 0.5rem;
     }
   }
-
-  /* (-webkit-min-device-pixel-ratio:0) */
+  /* For projects flexbox scaling */
+  @media screen and (max-width: 1100px) 
+  {
+    .projects-flex
+    {
+      flex-direction: column;
+    }
+  }
+  /* For projects contact form scaling */
+  @media screen and (max-width: 900px) 
+  {
+    .contact-form
+    {
+      margin-left: 1.5rem;
+    }
+  }
   /* Safari */
   @media screen and (max-width: 600px) 
   { 
@@ -397,4 +445,20 @@ main
     {
       margin-bottom:-5rem;
     }
+
+    .projects-flex
+    {
+      flex-direction: column;
+    }
+
+    .projects-img
+    {
+      max-height: 200px;
+      display: block; 
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: -1rem;
+      margin-right: auto;
+    }
+
   }
